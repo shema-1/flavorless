@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Change Page</title>
+</head>
+<body>
+
+    <h1>Simple Text Changer</h1>
+
+    <p id="message">Click the button to change this text.</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").innerHTML = "The text has been changed!";
+        }
+    </script>
+
+</body>
+</html>
