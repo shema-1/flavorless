@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Text Change Page</title>
+
 </head>
 <body>
 
@@ -10,11 +11,24 @@
     <p id="message">Click the button to change this text.</p>
     <button onclick="changeText()">Change Text</button>
 
-    <script>
-        function changeText() {
-            document.getElementById("message").innerHTML = "The text has been changed!";
-        }
-    </script>
+    <!-- added feature: text input -->
+    <div>
+        <label for="userInput">Enter something:</label>
+        <input type="text" id="userInput" placeholder="Type here" />
+        <button onclick="showInput()">Show Input</button>
+        <p id="inputDisplay" class="highlight"></p>
+    </div>
+
+    <!-- added feature: an unordered list -->
+    <h2>Favorite Fruits</h2>
+    <ul id="fruitList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+    <button onclick="addFruit()">Add Fruit</button>
+
+    <script>function changeText(){document.getElementById("message").innerHTML="The text has been changed!";}function showInput(){const v=document.getElementById("userInput").value;document.getElementById("inputDisplay").textContent=v?`You typed: ${v}`:"You didn’t type anything.";}function addFruit(){const l=document.createElement("li");l.textContent="New Fruit";document.getElementById("fruitList").appendChild(l);}</script>
 
 </body>
 </html>
